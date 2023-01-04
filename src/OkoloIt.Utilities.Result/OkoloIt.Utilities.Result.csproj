@@ -4,6 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Company>Okolo IT</Company>
+    <Authors>Okolo IT</Authors>
+    <Version>1.1.0</Version>
+    <FileVersion>1.1.0.1</FileVersion>
+    <Description>Returns an object indicating success or failure of an operation instead of throwing/using exceptions.</Description>
+    <AssemblyName>OkoloIt.Utilities.Result</AssemblyName>
+    <PackageTags>Result</PackageTags>
   </PropertyGroup>
 
 </Project>
