@@ -8,7 +8,6 @@
 
 Данное программное обеспечение работает на .NET core версии 6.
 
----
 ## Установка
 
 Установка OkoloIt.Utilities.Result через NuGet:
@@ -17,22 +16,18 @@
 Install-Package OkoloIt.Utilities.Result
 ```
 
----
 ## Пример использования
 
 - Пример использования бибилиотеки можно увидеть [здесь](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/tree/master/samples/OkoloIt.Utilities.Result.Samples).
 
----
 ## История выпусков
 
-- 04.01.2023 - v 1.1.0
+04.01.2023 - v 1.1.0
 
----
 ## Авторы
 
 [Okolo IT](https://vk.com/okolo_it_govnokoding)
 
----
 ## Лицензия
 >Вы можете ознакомиться с полной лицензией [здесь](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/blob/master/LICENSE.md)
 Этот проект находится под лицензией **MIT**.
