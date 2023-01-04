@@ -11,10 +11,12 @@ namespace OkoloIt.Utilities.Result.Tests
         public void Fail_MessageError_ReturnError()
         {
             IResult result = Result.Fail("Error");
-
-            Assert.IsFalse(result.Success);
-            Assert.IsTrue(result.Error);
-            Assert.IsFalse(string.IsNullOrEmpty(result.Message));
+            
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Error, Is.True);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.False);
+            });
         }
 
         [Test]
@@ -22,9 +24,11 @@ namespace OkoloIt.Utilities.Result.Tests
         {
             IResult<int> result = Result.Fail<int>("Error");
 
-            Assert.IsFalse(result.Success);
-            Assert.IsTrue(result.Error);
-            Assert.IsFalse(string.IsNullOrEmpty(result.Message));
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Error, Is.True);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.False);
+            });
         }
 
         [Test]
@@ -32,19 +36,23 @@ namespace OkoloIt.Utilities.Result.Tests
         {
             IResult result = Result.Fail();
 
-            Assert.IsFalse(result.Success);
-            Assert.IsTrue(result.Error);
-            Assert.IsTrue(string.IsNullOrEmpty(result.Message));
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Error, Is.True);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.True);
+            });
         }
 
         [Test]
         public void Fail_SimpleValueError_ReturnError()
         {
             IResult<int> result = Result.Fail<int>();
-
-            Assert.IsFalse(result.Success);
-            Assert.IsTrue(result.Error);
-            Assert.IsTrue(string.IsNullOrEmpty(result.Message));
+            
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.False);
+                Assert.That(result.Error, Is.True);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.True);
+            });
         }
 
         [Test]
@@ -52,41 +60,49 @@ namespace OkoloIt.Utilities.Result.Tests
         {
             IResult result = Result.Ok("Ok");
 
-            Assert.IsTrue(result.Success);
-            Assert.IsFalse(result.Error);
-            Assert.IsFalse(string.IsNullOrEmpty(result.Message));
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Error, Is.False);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.False);
+            });
         }
 
         [Test]
         public void Ok_MessageValueOk_ReturnOk()
         {
             IResult<int> result = Result.Ok<int>(default, "Ok");
-
-            Assert.IsTrue(result.Success);
-            Assert.IsFalse(result.Error);
-            Assert.IsFalse(string.IsNullOrEmpty(result.Message));
-            Assert.IsTrue(result.Value == default);
+            
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Error, Is.False);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.False);
+                Assert.That(result.Value == default, Is.True);
+            });
         }
 
         [Test]
         public void Ok_SimpleOk_ReturnOk()
         {
             IResult result = Result.Ok();
-
-            Assert.IsTrue(result.Success);
-            Assert.IsFalse(result.Error);
-            Assert.IsTrue(string.IsNullOrEmpty(result.Message));
+            
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Error, Is.False);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.True);
+            });
         }
 
         [Test]
         public void Ok_SimpleValueOk_ReturnOk()
         {
             IResult<int> result = Result.Ok<int>(default);
-
-            Assert.IsTrue(result.Success);
-            Assert.IsFalse(result.Error);
-            Assert.IsTrue(string.IsNullOrEmpty(result.Message));
-            Assert.IsTrue(result.Value == default);
+            
+            Assert.Multiple(() => {
+                Assert.That(result.Success, Is.True);
+                Assert.That(result.Error, Is.False);
+                Assert.That(string.IsNullOrEmpty(result.Message), Is.True);
+                Assert.That(result.Value == default, Is.True);
+            });
         }
 
         #endregion Public Methods
