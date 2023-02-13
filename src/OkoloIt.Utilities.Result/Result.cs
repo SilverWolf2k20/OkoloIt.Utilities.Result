@@ -42,66 +42,87 @@
         #region Public Methods
 
         /// <summary>
-        /// Возврощает обыект класса при ошибке.
+        /// Возврощает объект класса при ошибке.
         /// </summary>
-        /// <returns>Обыект класса.</returns>
+        /// <returns>Объект класса.</returns>
         public static Result Fail()
             => new Result(false, string.Empty);
 
         /// <summary>
-        /// Возврощает обыект класса при ошибке.
+        /// Возврощает объект класса при ошибке.
         /// </summary>
         /// <typeparam name="T">Тип возвращаемого значения.</typeparam>
-        /// <returns>Обыект класса.</returns>
+        /// <returns>Объект класса.</returns>
         public static Result<T> Fail<T>()
             => new Result<T>(default, false, string.Empty);
 
         /// <summary>
-        /// Возврощает обыект класса при ошибке с сообщением.
+        /// Возврощает объект класса при ошибке с сообщением.
         /// </summary>
         /// <param name="message">Сообщение.</param>
-        /// <returns>Обыект класса.</returns>
+        /// <returns>Объект класса.</returns>
         public static Result Fail(string message)
             => new Result(false, message);
 
         /// <summary>
-        /// Возврощает обыект класса при ошибке с сообщением.
+        /// Возврощает объект класса при ошибке с сообщением.
         /// </summary>
         /// <typeparam name="T">Тип возвращаемого значения.</typeparam>
         /// <param name="message">Сообщение.</param>
-        /// <returns>Обыект класса.</returns>
+        /// <returns>Объект класса.</returns>
         public static Result<T> Fail<T>(string message)
             => new Result<T>(default, false, message);
 
         /// <summary>
-        /// Возврощает обыект класса при успехе.
+        /// Возврощает объект класса при ошибке с сообщением.
         /// </summary>
-        /// <returns>Обыект класса.</returns>
+        /// <typeparam name="T">Тип возвращаемого значения.</typeparam>
+        /// <param name="value">Возвращаемное значение.</param>
+        /// <returns>Объект класса.</returns>
+        public static Result<T> Fail<T>(T value)
+            => new Result<T>(value, false, string.Empty);
+
+        /// <summary>
+        /// Возврощает объект класса при ошибке с сообщением.
+        /// </summary>
+        /// <typeparam name="T">Тип возвращаемого значения.</typeparam>
+        /// <param name="value">Возвращаемное значение.</param>
+        /// <param name="message">Сообщение.</param>
+        /// <returns></returns>
+        public static Result<T> Fail<T>(T value, string message)
+            => new Result<T>(value, false, message);
+
+        /// <summary>
+        /// Возврощает объект класса при успехе.
+        /// </summary>
+        /// <returns>Объект класса.</returns>
         public static Result Ok()
             => new Result(true, string.Empty);
 
         /// <summary>
-        /// Возврощает обыект класса при успехе.
+        /// Возврощает объект класса при успехе.
         /// </summary>
         /// <param name="message">Сообщение.</param>
-        /// <returns>Обыект класса.</returns>
+        /// <returns>Объект класса.</returns>
         public static Result Ok(string message)
             => new Result(true, message);
 
         /// <summary>
-        /// Возврощает обыект класса при успехе.
+        /// Возврощает объект класса при успехе.
         /// </summary>
         /// <typeparam name="T">Тип возвращаемого значения.</typeparam>
-        /// <returns>Обыект класса.</returns>
+        /// <param name="value">Возвращаемное значение.</param>
+        /// <returns>Объект класса.</returns>
         public static Result<T> Ok<T>(T value)
             => new Result<T>(value, true, string.Empty);
 
         /// <summary>
-        /// Возврощает обыект класса при успехе.
+        /// Возврощает объект класса при успехе.
         /// </summary>
         /// <typeparam name="T">Тип возвращаемого значения.</typeparam>
         /// <param name="message">Сообщение.</param>
-        /// <returns>Обыект класса.</returns>
+        /// <param name="value">Возвращаемное значение.</param>
+        /// <returns>Объект класса.</returns>
         public static Result<T> Ok<T>(T value, string message)
             => new Result<T>(value, true, message);
 
