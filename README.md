@@ -1,8 +1,12 @@
 # OkoloIt.Utilities.Result
 
-![coverage](https://img.shields.io/badge/version-1.1.0-blue) ![coverage](https://img.shields.io/badge/-Okolo%20IT-orange) ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/linux-ci.yml/badge.svg?branch=main) ![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/windows-ci.yml/badge.svg?branch=main) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/blob/master/LICENSE.md)
+![coverage](https://img.shields.io/badge/version-1.2.0-blue)
+![coverage](https://img.shields.io/badge/-Okolo%20IT-orange)
+![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/linux-ci.yml/badge.svg?branch=main)
+![alt text](https://github.com/open-telemetry/opentelemetry-dotnet/actions/workflows/windows-ci.yml/badge.svg?branch=main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/blob/master/LICENSE.md)
 
-**OkoloIt.Utilities.Result это библиотека издавляющая от необходимости использовать null или исключения. Она возвращает объект, указывающий на успех или неудачу операции**
+**OkoloIt.Utilities.Result это библиотека избавляющая от необходимости использовать null или исключения. Она возвращает объект, указывающий на успех или неудачу операции**
 
 # Поддерживаемые версии .NET
 
