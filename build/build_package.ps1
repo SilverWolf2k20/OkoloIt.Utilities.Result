@@ -1,9 +1,9 @@
-﻿# Clear Release folder
-$packagePath = $sourceDirectory + "\bin\Release\*.nupkg";
+﻿# Taken from psake https://github.com/psake/psake
 
-Remove-Item -Path $packagePath;
-dotnet clean $csProjfileName -c Release;
+# Clear Release folder
+Remove-Item -Path ..\src\OkoloIt.Utilities.Result\bin\Release\*.nupkg
+dotnet clean ..\src\OkoloIt.Utilities.Result\OkoloIt.Utilities.Result.csproj -c Release;
 
 # Build Project
-dotnet build $csProjfileName -c Release;
-dotnet pack  $csProjfileName -c Release;
+dotnet build ..\src\OkoloIt.Utilities.Result\OkoloIt.Utilities.Result.csproj -c Release;
+dotnet pack ..\src\OkoloIt.Utilities.Result\OkoloIt.Utilities.Result.csproj -c Release;
