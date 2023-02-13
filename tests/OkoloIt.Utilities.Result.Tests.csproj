@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\OkoloIt.Utilities.Result\OkoloIt.Utilities.Result.csproj" />
+    <ProjectReference Include="..\src\OkoloIt.Utilities.Result.csproj" />
   </ItemGroup>
 
 </Project>
