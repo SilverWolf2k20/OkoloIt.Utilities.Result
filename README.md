@@ -22,7 +22,7 @@ Install-Package OkoloIt.Utilities.Result
 
 ## Пример использования
 
-- Пример использования бибилиотеки можно увидеть [здесь](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/tree/master/samples/OkoloIt.Utilities.Result.Samples).
+- Пример использования бибилиотеки можно увидеть [здесь](https://github.com/SilverWolf2k20/OkoloIt.Utilities.Result/tree/master/samples/).
 
 ## История выпусков
 
